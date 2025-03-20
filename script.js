@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Show results section
         resultSection.style.display = 'block';
-        resultScore.innerText = `Your purity score is ${score}`;
+        resultScore.innerText = `Your UMD Purity Score: ${score}`;
 
         // Hide test section
         document.getElementById("test-section").style.display = 'none';
