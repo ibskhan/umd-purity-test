@@ -1,11 +1,55 @@
+/* Style the body to make sure the content is centered */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Light background */
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
+/* Create a box in the center for the title and questions */
+#purity-test-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px; /* Max width for bigger screens */
+    text-align: left;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style for the questions */
+label {
     font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+/* Add some space between the button and questions */
+#submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submit-btn:hover {
+    background-color: #0056b3;
 }
