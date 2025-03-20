@@ -49,16 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById("submit-btn");
     submitButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const checkedCount = checkboxes.length; // Count how many checkboxes are checked
-        const maxScore = questions.length; // Total number of questions
-        const score = maxScore - checkedCount; // Calculate purity score (the lower the better)
-
+        const score = checkboxes.length; // Count how many checkboxes are checked
         const resultSection = document.getElementById("results-section");
         const resultScore = document.getElementById("result-score");
 
         // Show results section
         resultSection.style.display = 'block';
-        resultScore.innerText = `Your UMD purity score: ${score}`;
+        resultScore.innerText = `Your purity score is ${score} out of ${questions.length}.`;
 
         // Hide test section
         document.getElementById("test-section").style.display = 'none';
@@ -72,5 +69,4 @@ document.addEventListener('DOMContentLoaded', function () {
         checkboxes.forEach(checkbox => checkbox.checked = false); // Uncheck all checkboxes
     });
 });
-
 
