@@ -67,7 +67,7 @@ const questions = [
 const container = document.getElementById("questions-container");
 questions.forEach((q, index) => {
     const label = document.createElement("label");
-    label.innerHTML = `<input type="checkbox" name="q${index}"> ${q}`;
+    label.innerHTML = `${index + 1}. <input type="checkbox" name="q${index}"> ${q}`;
     container.appendChild(label);
     container.appendChild(document.createElement("br"));
 });
