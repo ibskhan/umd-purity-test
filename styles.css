@@ -11,7 +11,7 @@ body {
 
 /* Create a box in the center for the title and questions */
 #purity-test-box {
-    background-color: green;
+    background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
