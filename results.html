@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UMD Purity Test - Results</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
     <h1>Your UMD Purity Score</h1>
-    <p id="score">Loading...</p>
-    <p id="description"></p>
-    <a href="index.html" class="btn">Retake Test</a>
-  </div>
-  <script src="script.js"></script>
+    <p id="result-score"></p>
+    <button onclick="window.location.href='index.html';">Retake Test</button>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const purityScore = urlParams.get('score');
+        document.getElementById('result-score').textContent = `Your UMD Purity Score is: ${purityScore}`;
+    </script>
 </body>
 </html>
