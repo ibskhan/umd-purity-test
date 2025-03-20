@@ -39,8 +39,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const container = document.getElementById("questions-container");
     questions.forEach((q, index) => {
         const label = document.createElement("label");
-        label.innerHTML = `${index + 1}. <input type="checkbox" name="q${index}"> ${q}`;
+        label.innerHTML = `${index + 1}. <input type="checkbox" name="q${index}" class="question-checkbox"> ${q}`;
         container.appendChild(label);
         container.appendChild(document.createElement("br"));
     });
+
+    // Add event listener for submit button
+    document.getElementById("submit-btn").addEventListener("click", function () {
+        let totalQuestions = questions.length;
+        let checkedBoxes = document.querySelectorAll(".question-checkbox:checked").length;
+        let purityScore = ((totalQuestions - checkedBoxes) / totalQuestions) * 100;
+
+        // Display the results
+        document.getElementById("result-score").innerText = `Your purity score is: ${purityScore.toFixed(2)}%`;
+        document.getElementById("test-section").style.display = "none";
+        document.getElementById("results-section").style.display = "block";
+    });
 });
+
+// Function to retake the test
+function showTest() {
+    document.getElementById("test-section").style.display = "block";
+    document.getElementById("results-section").style.display = "none";
+
+    // Uncheck all checkboxes when restarting the test
+    document.querySelectorAll(".question-checkbox").forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
+
