@@ -1,3 +1,33 @@
+// When the user submits the form, this will be called.
+document.getElementById('submit-btn').addEventListener('click', () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let score = 0;
+    
+    checkboxes.forEach((box) => {
+        if (box.checked) score++;
+    });
+
+    const totalQuestions = checkboxes.length;
+    const purityScore = ((totalQuestions - score) / totalQuestions) * 100;
+
+    // Display the result section and hide the test section
+    showResults(purityScore);
+});
+
+function showResults(purityScore) {
+    document.getElementById('test-section').style.display = 'none'; // Hide the test section
+    document.getElementById('results-section').style.display = 'block'; // Show the results section
+    
+    // Display the calculated score
+    document.getElementById('result-score').textContent = `Your UMD Purity Score is: ${purityScore.toFixed(2)}`;
+}
+
+function showTest() {
+    document.getElementById('results-section').style.display = 'none'; // Hide the results section
+    document.getElementById('test-section').style.display = 'block'; // Show the test section
+}
+
+// Dynamically generate questions
 const questions = [
     "Current student at UMD?", "Thought about dropping out of school?", "Applied to (or in) graduate school at UMD?", 
     "Was in a living learning program?", "Stayed at a dorm freshman year?", "Slept on campus during finals week?", 
@@ -40,13 +70,4 @@ questions.forEach((q, index) => {
     label.innerHTML = `<input type="checkbox" name="q${index}"> ${q}`;
     container.appendChild(label);
     container.appendChild(document.createElement("br"));
-});
-
-document.getElementById("submit-btn").addEventListener("click", () => {
-    const checkboxes = document.querySelectorAll("input[type='checkbox']");
-    let score = 0;
-    checkboxes.forEach(box => { if (box.checked) score++; });
-    const totalQuestions = checkboxes.length;
-    const purityScore = ((totalQuestions - score) / totalQuestions) * 100;
-    window.location.href = `results.html?score=${purityScore.toFixed(2)}`;
 });
