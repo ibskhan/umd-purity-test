@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UMD Purity Test</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMD Purity Test</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Home Section -->
-    <div id="home">
-      <h1>UMD Purity Test</h1>
-      <p>How pure are you? Take the UMD Purity Test to find out!</p>
-    </div>
-
-    <!-- Test Section -->
+    <h1>UMD Purity Test</h1>
+    <p>Take the test and see your score!</p>
+    
     <form id="purity-test">
-      <!-- Placeholder questions -->
-      <div class="question">
-        <p>1. Have you ever taken a selfie with Testudo?</p>
-        <label><input type="radio" name="q1" value="yes"> Yes</label>
-        <label><input type="radio" name="q1" value="no"> No</label>
-      </div>
-      <div class="question">
-        <p>2. Have you skipped class to hang out at The Stamp?</p>
-        <label><input type="radio" name="q2" value="yes"> Yes</label>
-        <label><input type="radio" name="q2" value="no"> No</label>
-      </div>
-      <!-- Add more questions here -->
-      <button type="submit" class="btn">Submit</button>
+        <label><input type="checkbox" name="q1"> Have you ever skipped a class?</label><br>
+        <label><input type="checkbox" name="q2"> Have you ever pulled an all-nighter?</label><br>
+        <label><input type="checkbox" name="q3"> Have you ever attended a college party?</label><br>
+        <button type="button" id="submit-btn">Submit</button>
     </form>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
