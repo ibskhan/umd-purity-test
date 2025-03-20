@@ -1,8 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left; /* Align the text to the left */
     margin: 20px;
     background-color: #ebd8b3;
+}
+
+#test-section {
+    max-width: 800px; /* Optional: Set a maximum width for the test section */
+    margin: 0 auto;  /* Center the test section horizontally */
+    padding: 20px;
+}
+
+label {
+    display: block; /* Makes each question on a new line */
+    margin-bottom: 10px; /* Space between each question */
 }
 
 button {
