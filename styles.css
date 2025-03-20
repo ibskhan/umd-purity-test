@@ -6,12 +6,12 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f4f4f4; /* Light background */
+    background-color: #decba3; /* Light background */
 }
 
 /* Create a box in the center for the title and questions */
 #purity-test-box {
-    background-color: white;
+    background-color: green;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
