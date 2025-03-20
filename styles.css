@@ -28,7 +28,8 @@ button {
 }
 
 #submit-btn {
-    background-color: red;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #9d2a11;
     color: white;
     font-weight: bold;
     border: none;
