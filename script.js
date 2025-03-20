@@ -45,17 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     
 
-    // Calculate My Score functionality
+ // Calculate My Score functionality
     const submitButton = document.getElementById("submit-btn");
     submitButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const score = checkboxes.length; // Count how many checkboxes are checked
+        const checkedCount = checkboxes.length; // Count how many checkboxes are checked
+        const maxScore = questions.length; // Total number of questions
+        const score = maxScore - checkedCount; // Calculate purity score (the lower the better)
+
         const resultSection = document.getElementById("results-section");
         const resultScore = document.getElementById("result-score");
 
         // Show results section
         resultSection.style.display = 'block';
-        resultScore.innerText = `Your purity score is ${score} out of ${questions.length}.`;
+        resultScore.innerText = `Your UMD purity score: ${score}`;
 
         // Hide test section
         document.getElementById("test-section").style.display = 'none';
