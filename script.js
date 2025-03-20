@@ -1,15 +1,3 @@
-// Function to reset and show the test again
-function showTest() {
-    // Hide results section
-    document.getElementById("results-section").style.display = 'none';
-
-    // Show test section
-    document.getElementById("test-section").style.display = 'block';
-
-    // Clear all checkboxes
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => checkbox.checked = false);
-}
 
 // Ensure all event listeners and logic run only after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
@@ -94,6 +82,4 @@ document.addEventListener('DOMContentLoaded', function () {
         checkboxes.forEach(checkbox => checkbox.checked = false); // Uncheck all checkboxes
     });
 
-    // Ensure Retake Test button works properly
-    document.getElementById("retake-btn").addEventListener('click', showTest);
 });
