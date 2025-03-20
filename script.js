@@ -69,6 +69,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => checkbox.checked = false); // Uncheck all checkboxes
     });
+
+    function showTest() {
+    // Hide results section
+    document.getElementById("results-section").style.display = 'none';
+    
+    // Show test section
+    document.getElementById("test-section").style.display = 'block';
+    
+    // Clear all checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+}
+
 });
 
 
