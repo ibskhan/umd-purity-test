@@ -8,9 +8,29 @@
 </head>
 <body>
   <div class="container">
-    <h1>UMD Purity Test</h1>
-    <p>How pure are you? Take the UMD Purity Test to find out!</p>
-    <a href="test.html" class="btn">Start Test</a>
+    <!-- Home Section -->
+    <div id="home">
+      <h1>UMD Purity Test</h1>
+      <p>How pure are you? Take the UMD Purity Test to find out!</p>
+    </div>
+
+    <!-- Test Section -->
+    <form id="purity-test">
+      <!-- Placeholder questions -->
+      <div class="question">
+        <p>1. Have you ever taken a selfie with Testudo?</p>
+        <label><input type="radio" name="q1" value="yes"> Yes</label>
+        <label><input type="radio" name="q1" value="no"> No</label>
+      </div>
+      <div class="question">
+        <p>2. Have you skipped class to hang out at The Stamp?</p>
+        <label><input type="radio" name="q2" value="yes"> Yes</label>
+        <label><input type="radio" name="q2" value="no"> No</label>
+      </div>
+      <!-- Add more questions here -->
+      <button type="submit" class="btn">Submit</button>
+    </form>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
