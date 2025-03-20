@@ -43,6 +43,24 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(label);
         container.appendChild(document.createElement("br"));
     });
+    
+
+    // Calculate My Score functionality
+    const submitButton = document.getElementById("submit-btn");
+    submitButton.addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        const score = checkboxes.length; // Count how many checkboxes are checked
+        const resultSection = document.getElementById("results-section");
+        const resultScore = document.getElementById("result-score");
+
+        // Show results section
+        resultSection.style.display = 'block';
+        resultScore.innerText = `Your purity score is ${score} out of ${questions.length}.`;
+
+        // Hide test section
+        document.getElementById("test-section").style.display = 'none';
+    });
+
 
     // Clear Checkboxes functionality
     const clearButton = document.getElementById("clear-btn");
