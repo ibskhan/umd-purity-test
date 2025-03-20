@@ -17,7 +17,7 @@ h1, p {
 
 label {
     display: block; /* Makes each question on a new line */
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: left; /* Left align the questions */
 }
 
