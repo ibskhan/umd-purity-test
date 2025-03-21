@@ -65,10 +65,9 @@ button {
 #clear-btn:hover {
     background-color: darkred;
 }
-
 h1 img {
     display: inline-block;
     margin: 0 auto;
-    width: 50px; /* Adjust the width to your desired size */
-    height: auto; /* Maintain aspect ratio */
+    width: 50px !important; /* Adjust the width to your desired size */
+    height: auto !important; /* Maintain aspect ratio */
 }
