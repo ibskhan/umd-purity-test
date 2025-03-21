@@ -1,7 +1,8 @@
 body {
     font-family: "Times New Roman", Times, serif;
     margin: 20px;
-    background-color: #ebd8b3;
+    background-image: url('images/terp.png'); /* Set the image as the background */
+    background-repeat: repeat; /* Repeat the image in both directions (horizontal and vertical) */
 }
 
 #test-section {
