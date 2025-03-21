@@ -61,3 +61,10 @@ button {
 #clear-btn:hover {
     background-color: darkred;
 }
+
+#title-image {
+    display: block; /* Ensures it's a block element */
+    margin: 0 auto 20px; /* Centers the image horizontally and adds space below it */
+    width: 200px; /* Adjust the image width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
