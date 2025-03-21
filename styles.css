@@ -3,7 +3,7 @@ body {
     margin: 20px;
     background-image: url('images/terp.png'); /* Set the image as the background */
     background-repeat: repeat; /* Repeat the image in both directions (horizontal and vertical) */
-    background-size: 50px 50px;
+    background-size: 10px 10px;
 }
 
 #test-section {
