@@ -1,68 +1,63 @@
-/* Style for the title image */
-#title-image {
-    display: block; /* Ensures it's a block element */
-    margin: 0 auto 20px; /* Centers the image horizontally and adds space below it */
-    width: 200px; /* Adjust the image width as needed */
-    height: auto; /* Maintain the aspect ratio */
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 20px;
+    background-image: url('images/my_m.png'); /* Set the image as the background */
+    background-repeat: repeat; /* Repeat the image in both directions (horizontal and vertical) */
+    background-size: 100px 100px;
 }
 
-/* Style for the entire test section */
 #test-section {
-    max-width: 100%; /* Ensure the section can expand fully */
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* This centers the text and image */
+    text-align: center; /* Center the title and description */
 }
 
-/* Style for h1 and p tags */
 h1, p {
     text-align: center; /* Keep the title and paragraph centered */
 }
 
-/* Button container styles */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+label {
+    display: block; /* Makes each question on a new line */
+    font-size: 15px;
+    margin-bottom: 1px;
+    text-align: left; /* Left align the questions */
 }
 
-/* Styles for the buttons */
 button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+#submit-btn {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #9d2a11;
+    color: white;
+    font-weight: bold;
+    border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+#submit-btn:hover {
+    background-color: darkred;
 }
 
-/* Styling for the form questions container */
-#questions-container {
-    margin-top: 20px;
+#clear-btn {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #ffffff;
+    color: #9d2a11;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/* Additional styles to ensure a clean and consistent layout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+#clear-btn:hover {
+    background-color: darkred;
 }
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
