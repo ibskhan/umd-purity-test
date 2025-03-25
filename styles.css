@@ -26,6 +26,14 @@ body {
     text-align: center;
 }
 
+#test-section p {
+    font-size: 22px; /* Adjust font size as needed */
+    font-weight: bold;
+    line-height: 1.6; /* Optional: Adjust line height for better spacing between lines */
+    text-align: center; /* Ensure the text is centered */
+}
+
+
 h1, p {
     text-align: center;
 }
