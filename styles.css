@@ -2,26 +2,39 @@ body {
     font-family: "Times New Roman", Times, serif;
     margin: 20px;
     background-image: url('images/my_m.png'); /* Set the image as the background */
-    background-repeat: repeat; /* Repeat the image in both directions (horizontal and vertical) */
+    background-repeat: repeat; /* Repeat the image in both directions */
     background-size: 100px 100px;
+}
+
+#header-container {
+    text-align: center; /* Centers inline elements like images */
+    margin-bottom: 20px; /* Adds spacing below the image */
+}
+
+#title-image {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    max-width: 100%; /* Prevents overflow on smaller screens */
+    width: 900px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 #test-section {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Center the title and description */
+    text-align: center;
 }
 
 h1, p {
-    text-align: center; /* Keep the title and paragraph centered */
+    text-align: center;
 }
 
 label {
-    display: block; /* Makes each question on a new line */
+    display: block;
     font-size: 15px;
     margin-bottom: 1px;
-    text-align: left; /* Left align the questions */
+    text-align: left;
 }
 
 button {
@@ -62,9 +75,3 @@ button {
     background-color: darkred;
 }
 
-#title-image {
-    display: block; /* Ensures it's a block element */
-    margin: 0 auto 20px; /* Centers the image horizontally and adds space below it */
-    width: 900px; /* Adjust the image width as needed */
-    height: auto; /* Maintain the aspect ratio */
-}
