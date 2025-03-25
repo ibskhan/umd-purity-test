@@ -26,6 +26,18 @@ body {
     text-align: center;
 }
 
+.intro-text {
+    font-style: italic;  /* Italicize the text */
+    font-size: 18px;     /* Optional: Adjust the font size */
+}
+
+.caution-text {
+    font-weight: bold;   /* Bold text */
+    font-size: 20px;     /* Optional: Adjust the font size */
+    color: red;          /* Optional: Red color for emphasis */
+}
+
+
 
 
 h1, p {
