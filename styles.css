@@ -100,7 +100,7 @@ button {
 
 #questions-container label {
     margin-bottom: 0.1em;  /* Reduced from default (was ~1em) */
-    line-height: .1;     /* Tighter line height within labels */
+    line-height: .5;     /* Tighter line height within labels */
 }
 
 
