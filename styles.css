@@ -1,22 +1,22 @@
 body {
     font-family: "Times New Roman", Times, serif;
     margin: 20px;
-    background-image: url('images/my_m.png'); /* Set the image as the background */
-    background-repeat: repeat; /* Repeat the image in both directions */
+    background-image: url('images/my_m.png'); 
+    background-repeat: repeat;
     background-size: 100px 100px;
 }
 
 #header-container {
-    text-align: center; /* Centers inline elements like images */
-    margin-bottom: 20px; /* Adds spacing below the image */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #title-image {
     display: block;
-    margin: 0 auto; /* Centers the image */
-    max-width: 100%; /* Prevents overflow on smaller screens */
-    width: 900px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto;
+    max-width: 100%;
+    width: 900px;
+    height: auto;
 }
 
 #test-section {
@@ -27,18 +27,15 @@ body {
 }
 
 .intro-text {
-    font-style: italic;  /* Italicize the text */
-    font-size: 18px;     /* Optional: Adjust the font size */
+    font-style: italic;
+    font-size: 18px;
 }
 
 .caution-text {
-    font-weight: bold;   /* Bold text */
-    font-size: 20px;     /* Optional: Adjust the font size */
-    color: black;          /* Optional: Red color for emphasis */
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
 }
-
-
-
 
 h1, p {
     text-align: center;
@@ -74,28 +71,7 @@ button {
 }
 
 #clear-btn {
-    font-family: "Times New Roman", Times, serif;
-    background-color: #ffffff;
-    color: #9d2a11;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+    font-family:
 
-#clear-btn:hover {
-    background-color: darkred;
-}
-
-#result-score {
-    color: red;               
-    font-size: 90px;          
-    font-weight: bold;       
-    font-family: "Times New Roman", Times, serif; 
-    margin-top: 20px;  
-    margin-bottom: 20px;
-}
 
 
