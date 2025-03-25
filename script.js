@@ -1,3 +1,4 @@
+// Ensure all event listeners and logic run only after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     const questions = [
         "Current student at UMD?", "Thought about dropping out of school?", 
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Kicked your roommate out because YOU were getting active ;) ?"
     ];
 
+    // Generate the questions dynamically
     const container = document.getElementById("questions-container");
     questions.forEach((q, index) => {
         const label = document.createElement("label");
@@ -57,15 +59,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById("submit-btn");
     submitButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const checkedCount = checkboxes.length;
-        const maxScore = questions.length;
-        const score = maxScore - checkedCount;
+        const checkedCount = checkboxes.length; // Count how many checkboxes are checked
+        const maxScore = questions.length; // Total number of questions
+        const score = maxScore - checkedCount; // Calculate purity score
 
         const resultSection = document.getElementById("results-section");
         const resultScore = document.getElementById("result-score");
 
+        // Show results section
         resultSection.style.display = 'block';
         resultScore.innerText = `${score}`;
+
+        // Hide test section
         document.getElementById("test-section").style.display = 'none';
     });
 
@@ -73,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const clearButton = document.getElementById("clear-btn");
     clearButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => checkbox.checked = false);
+        checkboxes.forEach(checkbox => checkbox.checked = false); // Uncheck all checkboxes
     });
+
 });
