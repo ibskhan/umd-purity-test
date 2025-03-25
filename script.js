@@ -54,32 +54,22 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(document.createElement("br"));
     });
 
- const submitButton = document.getElementById("submit-btn");
-submitButton.addEventListener('click', function () {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    const checkedCount = checkboxes.length;
-    const maxScore = questions.length;
-    const score = maxScore - checkedCount;
+    // Calculate My Score functionality (FIXED VERSION)
+    const submitButton = document.getElementById("submit-btn");
+    submitButton.addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        const checkedCount = checkboxes.length;
+        const maxScore = questions.length;
+        const score = maxScore - checkedCount;
 
-    // Hide the test section and form
-    document.getElementById("test-section").style.display = 'none';
-    document.getElementById("purity-test").style.display = 'none';
+        // Hide BOTH the test section AND the form
+        document.getElementById("test-section").style.display = 'none';
+        document.getElementById("purity-test").style.display = 'none';
 
-    // Show results
-    document.getElementById("results-section").style.display = 'block';
-    document.getElementById("result-score").innerText = `${score}`;
-
-    // === NEW: Google Forms tracking ===
-    const formUrl = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
-    const formData = new FormData();
-    formData.append("entry.XXXXXXXX", score); // Replace with your field ID!
-
-    fetch(formUrl, {
-        method: "POST",
-        body: formData,
-        mode: "no-cors" // Bypass CORS errors
-    }).catch(err => console.log("Submission logged silently")); // Optional error handling
-});
+        // Show results
+        document.getElementById("results-section").style.display = 'block';
+        document.getElementById("result-score").innerText = `${score}`;
+    });
 
     // Clear Checkboxes functionality (unchanged)
     const clearButton = document.getElementById("clear-btn");
