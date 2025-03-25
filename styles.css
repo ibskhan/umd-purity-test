@@ -34,7 +34,7 @@ body {
 .caution-text {
     font-weight: bold;   /* Bold text */
     font-size: 20px;     /* Optional: Adjust the font size */
-    color: red;          /* Optional: Red color for emphasis */
+    color: black;          /* Optional: Red color for emphasis */
 }
 
 
