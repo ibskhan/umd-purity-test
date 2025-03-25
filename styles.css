@@ -98,4 +98,9 @@ button {
     margin-bottom: 20px;
 }
 
+#questions-container label {
+    margin-bottom: 0.1em;  /* Reduced from default (was ~1em) */
+    line-height: 1.2;     /* Tighter line height within labels */
+}
+
 
