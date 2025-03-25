@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Show results section
         resultSection.style.display = 'block';
-        resultScore.innerText = `{score}`;
+        resultScore.innerText = `${score}`;
 
         // Hide test section
         document.getElementById("test-section").style.display = 'none';
