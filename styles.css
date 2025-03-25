@@ -83,3 +83,18 @@ button {
     margin-top: 20px;         
 }
 
+
+#results-section p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #9d2a11; /* Use the same color as the submit button */
+    text-align: center;
+    margin-top: 10px;
+}
+
+#results-section p:last-child {
+    font-weight: bold;
+    color: darkred; /* For the credit line */
+}
+
+
