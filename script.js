@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Participated in an intramural sports team?", "Listened to a concert at the Clarice?", 
         "Performed at the Clarice?", "Called UMD a 'Public Ivy'?", "Touched Testudo’s nose?", 
         "Gave Testudo offerings?", "Taken a picture with Testudo?", "Jumped in the fountain?", 
-        "Laid on the mall?", "Wondered who is under Testudo?", "Seen a furry on campus?",
+        "Layed on the mall?", "Wondered who is under Testudo?", "Seen a furry on campus?",
         "Lived in Commons/Courtyards?", "Hosted a party in your Commons/Courtyards apartment?",
         "Waited 1+ week for Commons/Courtyards maintenance?", "Got in trouble with your RA?", 
         "Lived in an off-campus apartment?", "Threw a party at your off-campus apartment?", 
