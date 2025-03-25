@@ -80,7 +80,8 @@ button {
     font-size: 90px;          
     font-weight: bold;       
     font-family: "Times New Roman", Times, serif; 
-    margin-top: 20px;         
+    margin-top: 20px;  
+    margin-bottom: 20px;
 }
 
 
