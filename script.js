@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const questions = [
+const questions = [
         "Current student at UMD?", "Thought about dropping out of school?", 
         "Applied to (or in) graduate school at UMD?", "Was in a living learning program?",
         "Stayed at a dorm freshman year?", "Slept on campus during finals week?",
@@ -43,38 +42,41 @@ document.addEventListener('DOMContentLoaded', function () {
         "Been to RJ Bentley’s?", "Been to Turf’s?", "Been to Looney’s?", "Been to Cornerstone?",
         "Kicked out by your roommate because they were getting active ;) ?", 
         "Kicked your roommate out because YOU were getting active ;) ?"
-    ];
+];
 
-    // Generate the questions dynamically
-    const container = document.getElementById("questions-container");
-    questions.forEach((q, index) => {
-        const label = document.createElement("label");
-        label.innerHTML = `${index + 1}. <input type="checkbox" name="q${index}"> ${q}`;
-        container.appendChild(label);
-        container.appendChild(document.createElement("br"));
-    });
+const submitButton = document.getElementById('submitButton');
+const testSection = document.getElementById('test-section');
+const purityTest = document.getElementById('purity-test');
+const resultsSection = document.getElementById('results-section');
+const resultScore = document.getElementById('result-score');
 
-    // Calculate My Score functionality (FIXED VERSION)
-    const submitButton = document.getElementById("submit-btn");
-    submitButton.addEventListener('click', function () {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const checkedCount = checkboxes.length;
-        const maxScore = questions.length;
-        const score = maxScore - checkedCount;
+submitButton.addEventListener('click', function () {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const checkedCount = checkboxes.length;
+    const maxScore = questions.length;
+    const score = maxScore - checkedCount;
 
-        // Hide BOTH the test section AND the form
-        document.getElementById("test-section").style.display = 'none';
-        document.getElementById("purity-test").style.display = 'none';
+    // Hide both the test section and the form
+    testSection.style.display = 'none';
+    purityTest.style.display = 'none';
 
-        // Show results
-        document.getElementById("results-section").style.display = 'block';
-        document.getElementById("result-score").innerText = `${score}`;
-    });
+    // Show the results
+    resultsSection.style.display = 'block';
+    resultScore.innerText = `${score}`;
 
-    // Clear Checkboxes functionality (unchanged)
-    const clearButton = document.getElementById("clear-btn");
-    clearButton.addEventListener('click', function () {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => checkbox.checked = false);
+    // Increment submission count in Google Sheets
+    fetch('https://script.google.com/macros/s/AKfycbxykHrfiEOoBK-IUoGJ8exY9bdpNoNm_FLY9jAPJNLaTVYoa0e20VZ0ihuFtIoknS3WpA/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ increment: true })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Submission count incremented:", data);
+    })
+    .catch(error => {
+        console.error("Error incrementing submission:", error);
     });
 });
