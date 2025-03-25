@@ -1,4 +1,3 @@
-// Ensure all event listeners and logic run only after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     const questions = [
         "Current student at UMD?", "Thought about dropping out of school?", 
@@ -55,30 +54,27 @@ document.addEventListener('DOMContentLoaded', function () {
         container.appendChild(document.createElement("br"));
     });
 
-    // Calculate My Score functionality
+    // Calculate My Score functionality (FIXED VERSION)
     const submitButton = document.getElementById("submit-btn");
     submitButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        const checkedCount = checkboxes.length; // Count how many checkboxes are checked
-        const maxScore = questions.length; // Total number of questions
-        const score = maxScore - checkedCount; // Calculate purity score
+        const checkedCount = checkboxes.length;
+        const maxScore = questions.length;
+        const score = maxScore - checkedCount;
 
-        const resultSection = document.getElementById("results-section");
-        const resultScore = document.getElementById("result-score");
-
-        // Show results section
-        resultSection.style.display = 'block';
-        resultScore.innerText = `${score}`;
-
-        // Hide test section
+        // Hide BOTH the test section AND the form
         document.getElementById("test-section").style.display = 'none';
+        document.getElementById("purity-test").style.display = 'none';
+
+        // Show results
+        document.getElementById("results-section").style.display = 'block';
+        document.getElementById("result-score").innerText = `${score}`;
     });
 
-    // Clear Checkboxes functionality
+    // Clear Checkboxes functionality (unchanged)
     const clearButton = document.getElementById("clear-btn");
     clearButton.addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => checkbox.checked = false); // Uncheck all checkboxes
+        checkboxes.forEach(checkbox => checkbox.checked = false);
     });
-
 });
