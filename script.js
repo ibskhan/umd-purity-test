@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("result-score").innerText = `${score}`;
 
     // Increment submissions in Google Sheets
-    fetch('https://script.google.com/macros/s/AKfycbwxEZ5c2cxAW8O6wzCBGfTlgEf7pRWQhyPrmEYK4As-jbUf09ahnl_Y-CMyXLU83-llAg/execc') // Use your web app URL
+    fetch('https://script.google.com/macros/s/AKfycbw_eVFUHJnY8M4Pz4ouAkLfge45waclJpBfW91cZXutzgnLDvVZSvRQ00BEkk9QalKJ6A/exec') // Use your web app URL
       .then(response => response.text())
       .then(data => {
         console.log(data); // Log the response from the script
